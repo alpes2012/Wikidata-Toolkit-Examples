@@ -22,7 +22,7 @@ public class SearchDataOnline {
         WbGetEntitiesSearchData properties =  new WbGetEntitiesSearchData();
         properties.language = "en";
         properties.limit = (long)50;
-        properties.search = "xijinping";
+        properties.search = "china town";
         properties.type = "item";
 
         lResult = (ArrayList<WbSearchEntitiesResult>) wbdf.searchEntities(properties);

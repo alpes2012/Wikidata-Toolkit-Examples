@@ -39,7 +39,8 @@ public class LocalDumpFileExample {
 	/**
 	 * Path to the dump that should be processed
 	 */
-	private final static String DUMP_FILE = "./resources/sample-dump-20150815.json.gz";
+	//private final static String DUMP_FILE = "./resources/sample-dump-20150815.json.gz";
+	private final static String DUMP_FILE = "D:\\Wikidata\\20190325.json.gz";
 
 	public static void main(String[] args) {
 		ExampleHelpers.configureLogging();
@@ -67,8 +68,8 @@ public class LocalDumpFileExample {
 		System.out.println();
 		System.out
 				.println("Processing a local dump file with all meta-data set:");
-		mwDumpFile = new MwLocalDumpFile(DUMP_FILE, DumpContentType.JSON,
-				"20150815", "wikidatawiki");
+		mwDumpFile = new MwLocalDumpFile(DUMP_FILE, DumpContentType.FULL,
+				"20190325", "wikidatawiki");
 		dumpProcessingController.processDump(mwDumpFile);
 
 		entityTimerProcessor.close();
